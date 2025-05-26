@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPPN Encontro das Águas</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "N6cvk3iltq7DuxFTg",
+        });
+    })();
+    </script>
+</head>
+<body>
+    <header>
+        <h1>RPPN Encontro das Águas</h1>
+        <p>Ajude a proteger nossa reserva — Denuncie invasões!</p>
+    </header>
+
+    <section id="conscientizacao">
+        <h2>O que é considerado uma invasão?</h2>
+        <p>
+            Uma invasão pode incluir entrada não autorizada de pessoas, coleta de plantas ou animais,
+            caça ilegal, acampamentos, incêndios, lixo deixado na mata ou qualquer atividade que interfira
+            na fauna e flora protegidas da reserva. Se você presenciou algo suspeito, denuncie!
+        </p>
+    </section>
+
+    <section id="formulario">
+        <h2>Formulário de Denúncia</h2>
+        <form id="denuncia-form">
+            <label>Nome (opcional):</label>
+            <input type="text" name="nome" placeholder="Seu nome">
+
+            <label>Data:</label>
+            <input type="date" name="data" required>
+
+            <label>Horário:</label>
+            <input type="time" name="hora" required>
+
+            <label>Local da Ocorrência:</label>
+            <input type="text" name="local" required>
+
+            <label>Descrição do que foi visto:</label>
+            <textarea name="descricao" required></textarea>
+
+            <label>Foto da Ocorrência:</label>
+            <input type="file" name="foto" accept="image/*">
+
+            <button type="submit" onclick="enviarEmail()">Enviar Denúncia</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 RPPN Encontro das Águas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
