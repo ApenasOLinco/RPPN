@@ -11,7 +11,7 @@
     <script type="text/javascript">
     (function(){
         emailjs.init({
-            publicKey: "N6cvk3iltq7DuxFTg",
+            publicKey: "Su8gPtOTp1pnJQ9Dx",
         });
     })();
     </script>
@@ -35,24 +35,24 @@
         <h2>Formulário de Denúncia</h2>
         <form id="denuncia-form">
             <label>Nome (opcional):</label>
-            <input type="text" name="nome" placeholder="Seu nome">
+            <input id="nome" type="text" name="nome" placeholder="Seu nome">
 
             <label>Data:</label>
-            <input type="date" name="data" required>
+            <input id="data" type="date" name="data" required>
 
             <label>Horário:</label>
-            <input type="time" name="hora" required>
+            <input id="hora" type="time" name="hora" required>
 
             <label>Local da Ocorrência:</label>
-            <input type="text" name="local" required>
+            <input id="local" type="text" name="local" required>
 
             <label>Descrição do que foi visto:</label>
-            <textarea name="descricao" required></textarea>
+            <textarea id="descricao" name="descricao" required></textarea>
 
             <label>Foto da Ocorrência:</label>
-            <input type="file" name="foto" accept="image/*">
+            <input id="foto" type="file" name="foto" accept="image/*">
 
-            <button type="submit" onclick="enviarEmail()">Enviar Denúncia</button>
+            <button type="submit">Enviar Denúncia</button>
         </form>
     </section>
 
