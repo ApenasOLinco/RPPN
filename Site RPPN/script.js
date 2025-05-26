@@ -3,13 +3,12 @@ document.getElementById("denuncia-form").addEventListener("submit", function(eve
     event.preventDefault();
     
     // Aqui entraria o envio usando EmailJS
-    function enviarEmail(){
-        let parms = {
-            nome      : document.getElementByName("nome").value,
-            descricao : document.getElementsByName("descricao").value,
-        }
-        emailjs.send("service_9t4rbwq", "template_58i4qmu", parms).then(alert("Denúncia enviada com sucesso! Obrigado por proteger a natureza."));
+    let parms = {
+        nome      : document.getElementById("nome").value,
+        descricao : document.getElementById("descricao").value,
     }
+
+    emailjs.send("service_k0j6mza", "template_uyxwwyh", parms).then(alert("Denúncia enviada com sucesso! Obrigado por proteger a natureza."));
     
     // Você pode resetar o formulário:
     this.reset();
