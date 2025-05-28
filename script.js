@@ -4,7 +4,7 @@ document.getElementById("denuncia-form").addEventListener("submit", function(eve
     
     // Aqui entraria o envio usando EmailJS
     let parms = {
-        nome      : document.getElementById("nome").value,
+        nome      : document.getElementById("nome").value || "Anônimo",
         data      : document.getElementById("data").value,
         hora      : document.getElementById("hora").value,
         local     : document.getElementById("local").value,
