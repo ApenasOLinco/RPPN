@@ -5,7 +5,10 @@ document.getElementById("denuncia-form").addEventListener("submit", function(eve
     // Aqui entraria o envio usando EmailJS
     let parms = {
         nome      : document.getElementById("nome").value,
-        descricao : document.getElementById("descricao").value,
+        data      : document.getElementById("data").value,
+        hora      : document.getElementById("hora").value,
+        local     : document.getElementById("local").value,
+        descricao : document.getElementById("descricao").value
     }
 
     emailjs.send("service_k0j6mza", "template_uyxwwyh", parms).then(alert("Denúncia enviada com sucesso! Obrigado por proteger a natureza."));
